@@ -35,10 +35,6 @@ install_play()
     echo "-----> Error downloading Play! framework. Please check to ensure it exists at $PLAY_URL"
     exit 1
   fi
-  if [ -z "`file $PLAY_TAR_FILE | grep gzip`" ]; then
-    echo "-----> Error installing Play! framework or unsupported Play! framework version specified. Please review Dev Center for a list of supported versions."
-    exit 1
-  fi
 #  tar xzf $PLAY_TAR_FILE
   unzip $PLAY_TAR_FILE
   ls -l
