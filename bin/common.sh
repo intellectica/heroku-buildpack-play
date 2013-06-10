@@ -41,6 +41,8 @@ install_play()
   fi
 #  tar xzf $PLAY_TAR_FILE
   unzip $PLAY_TAR_FILE
+  ls -l
+  mv play-$VER_TO_INSTALL $PLAY_PATH
   rm $PLAY_TAR_FILE
   chmod +x $PLAY_PATH/play
   echo "-----> done"
