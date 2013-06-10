@@ -29,8 +29,9 @@ install_play()
   PLAY_URL="https://github.com/intellectica/play-1.3.x-distribution/raw/master/play-$VER_TO_INSTALL.zip"
 
   PLAY_TAR_FILE="play-heroku.tar.gz"
-  echo "-----> Installing Play! $VER_TO_INSTALL....."
+  echo "-----> Installing Play! $VER_TO_INSTALL from $PLAY_URL"
   curl --silent --max-time 150 --location $PLAY_URL -o $PLAY_TAR_FILE
+  ls -l
   if [ ! -f $PLAY_TAR_FILE ]; then
     echo "-----> Error downloading Play! framework. Please check to ensure it exists at $PLAY_URL"
     exit 1
