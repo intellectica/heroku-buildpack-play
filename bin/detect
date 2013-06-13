@@ -3,6 +3,9 @@
 
 BUILD_DIR=$1
 
+echo "checking for play $BUILD_DIR"
+ls -l $BUILD_DIR
+
 play_confs=$(cd $BUILD_DIR; find . -wholename "*/conf/application.conf" ! -wholename "*modules*" -type f)
 
 if [ -n "$play_confs" ] && [ ! -f "$BUILD_DIR/project/Build.scala" ]; then
